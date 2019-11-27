@@ -46,75 +46,75 @@ int main (){
 	}
 
 for (int i = 0; i < row; ++i)
-	{
+{
 	// vector<int> tempv;
 	for (int j = 0; j <col; ++j)
 	{
-		cin>>output[i][j];
+		cin>>input[i][j];
 	}
 
-	// input.push_back(tempv);
-	}
+	 //input.push_back(tempv);
+}
 
 //rotating rows of the matrix................................
 
-// 	for (int i = 0; i < row; ++i)
-// 	{
-// 		if(kr[i]%2)
-// 		{
-// 			for (int j = 0; j < col; j++)
-// 			{
-// 				t1[i][j] = input[i][(j+kr[i])%col];
+	for (int i = 0; i < row; ++i)
+	{
+		if(kr[i]%2)
+		{
+			for (int j = 0; j < col; j++)
+			{
+				t1[i][j] = input[i][(j+kr[i])%col];
 
-// 			}
-// 		}
-// 		else
-// 		{
-// 			for (int j = 0; j < col; j++)
-// 			{
-// 				t1[i][j] = input[i][(j+col-kr[i])%col];
+			}
+		}
+		else
+		{
+			for (int j = 0; j < col; j++)
+			{
+				t1[i][j] = input[i][(j+col-kr[i])%col];
 
-// 			}
-// 		}
+			}
+		}
 	
-// 	}
+	}
 
 // //rotating colulmns of the matrix.................................
 
-// 	for (int j = 0; j < col; ++j)
-// 	{
-// 		if(kc[j]%2)
-// 		{
-// 			for (int i = 0; i < row; ++i)
-// 			{
-// 				t2[i][j] = t1[ (i+kc[j])%row ][ j ];
-// 			}
-// 		}
-// 		else
-// 		{
-// 			for (int i = 0; i < row; ++i)
-// 			{
-// 				t2[i][j] = t1[(i+row-kc[j])%row][j];
-// 			}
-// 		}
+	for (int j = 0; j < col; ++j)
+	{
+		if(kc[j]%2)
+		{
+			for (int i = 0; i < row; ++i)
+			{
+				t2[i][j] = t1[ (i+kc[j])%row ][ j ];
+			}
+		}
+		else
+		{
+			for (int i = 0; i < row; ++i)
+			{
+				t2[i][j] = t1[(i+row-kc[j])%row][j];
+			}
+		}
 	
-// 	}
+	}
 
 
 
 		
 // //inverting each element by taking bitwise xor with 255
 
-// for (int i = 0; i < row; ++i)
-// 	{
-// 	for (int j = 0; j <col; ++j)
-// 	{
+for (int i = 0; i < row; ++i)
+{
+	for (int j = 0; j <col; ++j)
+	{
 	
-// 		  output[i][j] = (t2[i][j])^255;
+		  output[i][j] = (t2[i][j])^255;
 		
-// 	}
+	}
 		
-// 	}
+}
 
 // //............................DECRYPTION................................
 // 	//..........................................................
